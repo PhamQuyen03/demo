@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0178)https://stackauth.com/auth/global/read?request=WML%2B18NgMCEm%2BQ3RsTB6Aw3yGW6M1TcEew1Hwfkai5iC9j7jMHsrfFhBgsZqqMqbm0gRZ8W16EwC44P4vYZEfA%3D%3D&nonce=iLkzVAAAAABUYtk4pZPVHA%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <script>
+                  var data = {"ReadSession":"https://stackauth.com/auth/global/read-session","Request":"WML+18NgMCEm+Q3RsTB6Aw3yGW6M1TcEew1Hwfkai5iC9j7jMHsrfFhBgsZqqMqbm0gRZ8W16EwC44P4vYZEfA==","Nonce":"iLkzVAAAAABUYtk4pZPVHA==","Referrer":"http://stackoverflow.com/questions/2839137/how-to-use-comparator-in-java-to-sort","StorageName":"GlobalLogin"};
+
+                  var toMsg = window.parent;
+
+                  var obj = localStorage.getItem(data.StorageName);
+                  if(obj != null) {
+                  var req = new XMLHttpRequest();
+                  req.open('POST', data.ReadSession+'?request='+encodeURIComponent(data.Request)+'&nonce='+encodeURIComponent(data.Nonce)+'&seriesAndToken='+encodeURIComponent(obj), false);
+                  req.send(null);
+                  
+                    if(req.status == 200){
+                      toMsg.postMessage(req.responseText, data.Referrer);
+                    }else{
+                      toMsg.postMessage('No Session', data.Referrer);
+                    }
+                  }else{
+                    toMsg.postMessage('No Local Storage', data.Referrer);
+                  }
+                  </script>
+                  <style></style></head><body></body></html>
